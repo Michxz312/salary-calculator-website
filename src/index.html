@@ -1,0 +1,97 @@
+<html>
+  
+<head>
+  <h1 id = "head"> Salary Calculator </h1>
+</head>
+  
+<body id = "main">
+  <div class = "columns">
+    <form>
+      <div class = "left">
+        <div class = "container">
+            <label id = "Salary Amount">Salary Amount <br> $ </label>
+            <input id = "salary-amount" type = "text" value = "30">
+            <label id = "per"> per </label>
+            <select id = "dropdown">
+              <option value = "Hour" selected> Hour </option>
+              <option value = "Daily"> Daily </option>
+              <option value = "Weekly"> Weekly </option>
+              <option value = "Monthly"> Monthly </option>
+              <option value = "Quarterly"> Quarterly </option>
+              <option value = "Annual"> Annual </option>
+            </select> <br>
+            <label> Hours per Week </label>
+            <input id = "Hours per Week" class = "amount" 
+                   type = "text" value = "40"> <br>
+            <label> Days per Week </label>
+            <input id = "Days per Week" class = "amount" 
+                   type = "text" value = "5"> <br>
+            <label> Holidays per Year </label>
+            <input id = "Holidays per Year" class = "amount" 
+                   type = "text" value = "10"> <br>
+            <label> Vacation Days per Year </label>
+            <input id = "Vacation Days per Year" class = "amount" 
+                   type = "text" value = "15"> <br>
+        </div>
+        <button type = "button" class = "submit" onClick= "calculate()"> Calculate
+        </button> 
+        <p> Notes: <br> 
+          <ul>
+            <li> Only works for Hour option </li>
+            <li> Integers only </li>
+            <li> Results are rounded to integers </li>
+            <li> limitations: no java library used </li>
+          </ul> 
+        </p>
+      </div>
+    </form>
+    <!-- Results -->
+    <div class = "right"> 
+      <h3 id = "result"> Result </h3>
+       <table id = "table">
+        <tr>
+          <th> </th>
+          <th> Unadjusted </th>
+          <th> Holidays & Vacation Days <br> Adjusted </th>
+        </tr>
+        <tr>
+          <td> Hourly </td>
+          <td> $30.00 </td>
+          <td> $27.12 </td>
+        </tr>
+        <tr>
+          <td> Daily </td>
+          <td> $240.00 </td>
+          <td> $216.92 </td>
+        </tr>
+        <tr>
+          <td> Weekly </td>
+          <td> $1,200 </td>
+          <td> $1,085 </td>
+        </tr>
+        <tr>
+          <td> Monthly </td>
+          <td> $5,200 </td>
+          <td> $4,700 </td>
+        </tr>
+        <tr>
+          <td> Quarterly </td>
+          <td> $15,600 </td>
+          <td> $14,100 </td>
+         </tr>
+        <tr>
+          <td> Annual </td>
+          <td> $62,400 </td>
+          <td> $56,400 </td>
+        </tr>
+      </table>
+   </div>
+  </div>
+</body>
+  
+<footer class = "footer">
+  <p> Reference website: <br> 
+    <a href = https://www.calculator.net/salary-calculator.html> calculator.net/salary-calculator </a> </p>
+</footer>
+  
+</html>
